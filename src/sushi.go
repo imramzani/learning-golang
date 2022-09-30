@@ -2,7 +2,6 @@ package main
 
 import (
 	"encoding/json"
-	"fmt"
 	"log"
 	"net/http"
 	"strconv"
@@ -53,7 +52,7 @@ func getRolls(w http.ResponseWriter, r *http.Request) {
 	w.Header().Set("Content-Type", "application/json")
 	responseList.Code = 200
 	responseList.Payload = rolls
-	fmt.Println("Learning Go on the fly")
+	// fmt.Println("Learning Go on the fly")
 	json.NewEncoder(w).Encode(responseList)
 }
 
